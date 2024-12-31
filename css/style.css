@@ -1,0 +1,23 @@
+.club1img2{
+    margin-left: 50px;
+}
+img{
+    cursor: pointer;
+}
+img:hover{
+    box-shadow: 0 10px 15px rgba(0, 149, 255, 0.5);
+    transition: all 0.4s ease;
+}
+.match-gooals{
+    width: 300px;
+}
+.bake{
+    width: fit-content;
+}
+img.active {
+    box-shadow: 0 10px 15px rgba(0, 149, 255, 0.5);
+    transition: all 0.4s ease;
+}
+.wf{
+    width: fit-content;
+}

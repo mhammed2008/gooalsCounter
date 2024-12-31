@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Gooals</title>
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <nav class="text-center">
+        <a href="./index.html" class="fs-1 btn fw-bold">
+            <img src="../images/logo.png" width="100">
+            Gooal Counter
+        </a>
+    </nav>
+
+    <div id="stor">
+
+
+    </div>
+
+    <a href="/" class="btn btn-primary fixed-bottom fw-bold fs-5 bake m-2">Bake</a>
+
+    <script>
+        let storage = JSON.parse(localStorage.getItem('storage'));
+        let box = ``;
+        for (let index = 0; index < storage.length; index++) {
+            let data = storage[index];
+            box += `
+            <div class="match-gooals mx-auto mt-3 bg-light ">
+                <h2>${index+1}</h2>
+            <div class="d-flex align-items-center">
+                <div>
+                    <img src="${data.club1Image}" alt="club1" width="60">
+                    <p class="text-center fw-bold fs-5">${data.club1Name}</p>
+                </div>
+                <p class="fw-bold fs-3 ms-4" id="club1-gools">${data.counter1}</p>
+                <p class="fw-bold fs-1 mx-4">-</p>
+                <p class="fw-bold fs-3 me-5" id="club2-gools">${data.counter2}</p>
+                <div>
+                    <img src="${data.club2Image}" alt="club1" width="60">
+                    <p class="text-center fw-bold fs-5">${data.club2Name}</p>
+                </div>
+
+            </div>
+        </div>
+            `
+            
+        }
+        document.getElementById('stor').innerHTML = box;
+
+    </script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
