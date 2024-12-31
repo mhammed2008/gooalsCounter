@@ -1,5 +1,5 @@
 if (!localStorage.getItem('data')) {
-    window.open('/', '_self');
+    window.open('/gooalsCounter/', '_self');
 }
 
 const data = JSON.parse(localStorage.getItem('data'));
@@ -113,7 +113,7 @@ startNew.addEventListener('click', () => {
         localStorage.removeItem('gooals');
         localStorage.removeItem('data');
         seveToStorage();
-        window.open('/', '_self');
+        window.open('/gooalsCounter/', '_self');
     }
     
 });
